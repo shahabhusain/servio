@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center mt-20 justify-between w-[90%] mx-auto text-center md:text-left">
+    <div id="home" className="flex flex-col-reverse md:flex-row items-center mt-20 justify-between w-[90%] mx-auto text-center md:text-left">
       {/* Left Side Content */}
       <div className="flex flex-col gap-3 w-full md:w-1/2">
         <h1 className="text-[#2DC653] font-[700] text-[32px] md:text-[39px] leading-tight">

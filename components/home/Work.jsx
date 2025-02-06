@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Work = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center mt-32 justify-between w-[90%] mx-auto">
+    <div id="how" className="flex flex-col md:flex-row items-center mt-32 justify-between w-[90%] mx-auto">
       <div className=" flex flex-col gap-5 md:w-[40%] w-full">
         <h1 className=" text-[#000] font-[700] text-[36px]">
         Get the work you want, when you want it
