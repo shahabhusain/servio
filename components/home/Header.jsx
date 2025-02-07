@@ -31,7 +31,7 @@ const Header = () => {
         </ul>
 
         {/* Mobile Menu Icon */}
-        <div className="md:hidden cursor-pointer text-[#F8F8F8] text-[35px]" onClick={() => setMenu(!menu)}>
+        <div className="md:hidden cursor-pointer text-[#F8F8F8] text-[35px] z-[1000]" onClick={() => setMenu(!menu)}>
           {menu ? <IoMdClose /> : <IoMdMenu />}
         </div>
       </div>

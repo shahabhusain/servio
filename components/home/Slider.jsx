@@ -8,9 +8,14 @@ import Image from "next/image";
 import { FaUser } from "react-icons/fa";
 import { IoIosStar } from "react-icons/io";
 import slider from "@/public/slider.png";
+import slider1 from "@/public/slider1.png";
+import slider2 from "@/public/slider2.png";
+import slider3 from "@/public/silder3.png";
+import slider4 from "@/public/slider4.png";
 
 const sliderData = [
   {
+    img:slider,
     category: "Plumbing",
     title: "Pipe Repairs",
     user: "Martin Rosser",
@@ -18,66 +23,76 @@ const sliderData = [
     rating: "4.8",
   },
   {
-    category: "Electrical",
-    title: "Wiring Fix",
-    user: "John Doe",
-    price: "$150.00",
-    rating: "4.7",
+    img:slider1,
+    category: "Home Cleaning",
+    title: "Deep House Cleaning",
+    user: "Jenny Wilson",
+    price: "$180.00",
+    rating: "4.8",
   },
   {
-    category: "Cleaning",
-    title: "House Cleaning",
-    user: "Emily Clark",
-    price: "$80.00",
-    rating: "4.9",
+    img:slider2,
+    category: "Landscaping",
+    title: "Garden Design",
+    user: "Angel Aminoff",
+    price: "$290.00",
+    rating: "4.8",
   },
   {
+    img:slider3,
     category: "Painting",
-    title: "Wall Painting",
-    user: "Alex Brown",
-    price: "$200.00",
-    rating: "4.6",
+    title: "Interior Wall Painting",
+    user: "Corey Vaccaro",
+    price: "$180.00",
+    rating: "4.8",
   },
 
   {
+    img:slider4,
+    category: "Auto Servicing",
+    title: "Oil Change",
+    user: "Craig George",
+    price: "$85.00",
+    rating: "4.8",
+  },
+
+
+  {
+    img:slider1,
+    category: "Home Cleaning",
+    title: "Deep House Cleaning",
+    user: "Jenny Wilson",
+    price: "$180.00",
+    rating: "4.8",
+  },
+  {
+    img:slider2,
+    category: "Landscaping",
+    title: "Garden Design",
+    user: "Angel Aminoff",
+    price: "$290.00",
+    rating: "4.8",
+  },
+  {
+    img:slider3,
     category: "Painting",
-    title: "Wall Painting",
-    user: "Alex Brown",
-    price: "$200.00",
-    rating: "4.6",
+    title: "Interior Wall Painting",
+    user: "Corey Vaccaro",
+    price: "$180.00",
+    rating: "4.8",
   },
 
   {
-    category: "Painting",
-    title: "Wall Painting",
-    user: "Alex Brown",
-    price: "$200.00",
-    rating: "4.6",
+    img:slider4,
+    category: "Auto Servicing",
+    title: "Oil Change",
+    user: "Craig George",
+    price: "$85.00",
+    rating: "4.8",
   },
 
-  {
-    category: "Painting",
-    title: "Wall Painting",
-    user: "Alex Brown",
-    price: "$200.00",
-    rating: "4.6",
-  },
 
-  {
-    category: "Painting",
-    title: "Wall Painting",
-    user: "Alex Brown",
-    price: "$200.00",
-    rating: "4.6",
-  },
 
-  {
-    category: "Painting",
-    title: "Wall Painting",
-    user: "Alex Brown",
-    price: "$200.00",
-    rating: "4.6",
-  },
 ];
 
 const Slider = () => {
@@ -111,13 +126,13 @@ const Slider = () => {
       >
         {sliderData.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-[#F8F8F8] rounded-md shadow-md py-3 w-[350px] px-3 gap-3 flex justify-between border">
-              <Image src={slider} alt="image" width={120} height={120} />
+            <div className="bg-[#F8F8F8] rounded-md shadow-md py-3 w-[350px] px-3 gap-3 flex justify-between border ml-6">
+              <Image src={item.img} alt="image" width={120} height={120} />
               <div className="flex flex-col gap-3">
                 <h1 className="py-1 px-4 rounded-md bg-[#FFFFFF] text-black text-[10px] font-[500]">
                   {item.category}
                 </h1>
-                <h2 className="text-[14px] font-[500] text-black">{item.title}</h2>
+                <h2 className="md:text-[14px] text-[12px] font-[500] text-black whitespace-nowrap">{item.title}</h2>
                 <span className="text-[12px] font-[300] text-[#1A222DA8] flex items-center gap-3">
                   <FaUser size={20} className="text-[#2DC653]" /> {item.user}
                 </span>

@@ -11,6 +11,7 @@ import img8 from "@/public/icon8.png";
 import img9 from "@/public/icon9.png";
 import img10 from "@/public/icon10.png";
 import img11 from "@/public/icon11.png";
+import img12 from "@/public/icon12.png";
 import { useState } from "react";
 const services = [
     {title:"Plumbing", img:img1},
@@ -24,6 +25,7 @@ const services = [
     {title:"Painting", img:img9},
     {title:"Electrician", img:img10},
     {title:"Cleaning", img:img11},
+    {title:"Home Repair & Renovation", img:img12},
 ];
 
 const Services = () => {
@@ -48,10 +50,10 @@ const Services = () => {
               selected === index ? "bg-[#2DC653]" : "bg-[#F3F3F3]"
             } py-12 rounded-md flex flex-col gap-1 items-center justify-center cursor-pointer transition-all duration-300`}
           >
-            <div className={`${selected === index ? "border-[1px] border-[#2DC653] bg-white py-4 px-4 rounded-full w-fit" : "border-[1px] border-[#2DC653] bg-white py-4 px-4 py-3 px-3 rounded-full w-fit"}`}>
+            <div className={` ${selected === index ? "border-[1px] border-[#2DC653] bg-white py-4 px-4 rounded-full w-fit" : "border-[1px] border-[#2DC653] bg-white py-4 px-4  rounded-full w-fit"}`}>
               <Image src={service.img} alt="icon" height={50} width={50} />
             </div>
-            <p className={`text-[21px] font-[400] ${selected === index ? " text-white" : "text-[#1A222D]"} `}>{service.title}</p>
+            <p className={`text-[21px] font-[400] text-center ${selected === index ? " text-white" : "text-[#1A222D]"} `}>{service.title}</p>
           </div>
         ))}
       </div>
